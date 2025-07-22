@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+      if(event.key === 'Enter') //checks for enter key input
+        calculateTotal();
+    ">
+    <button onclick="
+      calculateTotal();
+    ">Calculate</button>
+    <p class="js-cost-output"></p>
+
+    <input class="js-input2" placeholder="Type Something" onkeyup="
+      onkey();
+    ">
+    <p class="js-input2-output"></p>
+
+    <script>
+     function onkey () {
+      let first = document.querySelector('.js-input2').value;
+      document.querySelector('.js-input2-output').innerHTML = document.querySelector('.js-input2').value;
+     }
+
+      
+     
+     
+     
+     
+     function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value); //converts anything to number
+        if(cost < 40) 
+          cost += 10;
+        
+        document.querySelector('.js-cost-output').innerHTML = `$${cost.toFixed(2)}`; //rounds the decimal to 2 
+          
+       }
+
+
+
+
+
+      function subscribe () {
+        const buttonElement = document.querySelector('.js-sub-button');
+
+        if(buttonElement.innerText === 'Subscribe') 
+          buttonElement.innerText = 'Subscribed';
+        else
+          buttonElement.innerText = 'Subscribe';
+
+      }
+
+    </script>
+
+  </body>
+</html>
