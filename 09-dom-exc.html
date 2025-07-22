@@ -12,8 +12,25 @@
       buttonAction();
     ">9b</button>
 
+    <button class="js-heads-button" onclick="
+      let playerMove = 'heads';
+      coinToss(playerMove);
+    
+    ">heads</button>
+    <button class="js-tails-button" onclick="
+      let playerMove = 'tails';
+      coinToss(playerMove);
+    ">tails</button>
+    <p class="js-result"></p>
 
     <script>
+
+      function coinToss(playerMove) {
+        if (playerMove === 'heads')
+          document.querySelector('.js-result').innerHTML = `You chose: ${playerMove}`;
+        else
+          document.querySelector('.js-result').innerHTML = `You chose: ${playerMove}`;
+      }
       
       console.log(document.querySelector('.js-button'));
       function buttonAction () {
