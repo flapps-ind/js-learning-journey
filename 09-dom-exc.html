@@ -11,7 +11,7 @@
     <button class="js-action-button" onclick="
       buttonAction();
     ">9b</button>
-
+  <p></p>
     <button class="js-heads-button" onclick="
       let playerMove = 'heads';
       coinToss(playerMove);
@@ -23,7 +23,25 @@
     ">tails</button>
     <p class="js-result"></p>
 
+    <input class ="js-input" placeholder="Name" onkeydown="
+      if(event.key === 'Enter')
+        nameDisplay();
+    ">
+    <button class="js-submit-button" onclick="
+      nameDisplay();
+    ">Submit</button>
+    <p class="js-name-result"></p>
     <script>
+
+      function nameDisplay() {
+        const inputElement = document.querySelector('.js-input');
+
+        document.querySelector('.js-name-result').innerHTML = `Your name is: ${inputElement.value}`;
+      }
+
+
+
+
 
       function coinToss(playerMove) {
         if (playerMove === 'heads')
