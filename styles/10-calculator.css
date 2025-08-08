@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+}
+
+.button-number-css {
+  background-color: rgb(51,51,51);
+  color: white;
+  border-radius: 60px;
+  border: none;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.button-operator-css {
+  background-color: rgb(254, 160, 10);
+  color: white;
+  border: none;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.button-font-css {
+  font-size: 20px;
+}
+
+.display-css {
+  color: white;
+  font-size: 45px;
+  font-family: arial;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
